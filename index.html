@@ -6,262 +6,209 @@
 <title>NovaCore.ia</title>
 
 <style>
+
 :root{
-    --bg:#09090b;
-    --card:#111827;
-    --text:#ffffff;
-    --muted:#94a3b8;
-    --gradient:linear-gradient(135deg,#4f46e5,#9333ea);
+--bg:#09090b;
+--card:#111827;
+--text:#ffffff;
+--muted:#94a3b8;
+--gradient:linear-gradient(135deg,#4f46e5,#9333ea);
 }
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 html{
-    scroll-behavior:smooth;
+scroll-behavior:smooth;
 }
 
-<script>
-(function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="g-Hc0_6jVvitnN1O7ubCD";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
-</script>
-
 body{
-    font-family:Inter,Arial,sans-serif;
-    background:var(--bg);
-    color:var(--text);
+font-family:Arial,sans-serif;
+background:var(--bg);
+color:var(--text);
 }
 
 .container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
+width:90%;
+max-width:1200px;
+margin:auto;
 }
 
-/* NAVBAR */
-
 nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:25px 0;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:25px 0;
 }
 
 .logo{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    font-size:1.4rem;
-    font-weight:700;
-}
-
-.logo img{
-    width:42px;
-    height:42px;
-    border-radius:50%;
-}
-
-nav ul{
-    display:flex;
-    list-style:none;
-    gap:35px;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    transition:.3s;
-}
-
-nav a:hover{
-    color:#a855f7;
-}
-
-/* HERO */
-
-.hero{
-    min-height:85vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-}
-
-.hero-content{
-    max-width:850px;
-}
-
-.badge{
-    display:inline-block;
-    padding:10px 18px;
-    border:1px solid rgba(147,51,234,.3);
-    border-radius:999px;
-    color:#c084fc;
-    margin-bottom:25px;
-}
-
-.hero h1{
-    font-size:clamp(3rem,8vw,6rem);
-    line-height:1.1;
-    margin-bottom:20px;
+font-size:1.7rem;
+font-weight:700;
 }
 
 .gradient{
-    background:var(--gradient);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
+background:var(--gradient);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+}
+
+.hero{
+min-height:80vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+}
+
+.hero-content{
+max-width:850px;
+}
+
+.badge{
+display:inline-block;
+padding:10px 18px;
+border-radius:999px;
+border:1px solid rgba(147,51,234,.3);
+color:#c084fc;
+margin-bottom:20px;
+}
+
+.hero h1{
+font-size:clamp(3rem,8vw,6rem);
+margin-bottom:20px;
 }
 
 .hero p{
-    color:var(--muted);
-    font-size:1.2rem;
-    max-width:700px;
-    margin:auto;
-    line-height:1.8;
+font-size:1.2rem;
+line-height:1.8;
+color:var(--muted);
 }
 
 .buttons{
-    margin-top:40px;
-    display:flex;
-    justify-content:center;
-    gap:15px;
-    flex-wrap:wrap;
+margin-top:35px;
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
 }
 
 .btn{
-    padding:15px 28px;
-    border-radius:12px;
-    text-decoration:none;
-    font-weight:600;
+padding:15px 28px;
+border-radius:12px;
+text-decoration:none;
+font-weight:600;
 }
 
 .btn-primary{
-    background:var(--gradient);
-    color:white;
+background:var(--gradient);
+color:white;
 }
 
 .btn-secondary{
-    border:1px solid #374151;
-    color:white;
+border:1px solid #374151;
+color:white;
 }
 
-/* SERVICES */
-
 section{
-    padding:100px 0;
+padding:100px 0;
 }
 
 .section-title{
-    text-align:center;
-    margin-bottom:60px;
+text-align:center;
+margin-bottom:60px;
 }
 
 .section-title h2{
-    font-size:2.5rem;
-    margin-bottom:10px;
+font-size:2.5rem;
 }
 
 .section-title p{
-    color:var(--muted);
+margin-top:10px;
+color:var(--muted);
 }
 
 .grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
 }
 
 .card{
-    background:var(--card);
-    padding:30px;
-    border-radius:20px;
-    border:1px solid rgba(255,255,255,.05);
-    transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-5px);
-}
-
-.card h3{
-    margin-bottom:15px;
+background:var(--card);
+padding:30px;
+border-radius:20px;
 }
 
 .card p{
-    color:var(--muted);
-    line-height:1.7;
+margin-top:10px;
+line-height:1.7;
+color:var(--muted);
 }
 
-/* ABOUT */
-
 .about{
-    text-align:center;
-    max-width:800px;
-    margin:auto;
+max-width:800px;
+margin:auto;
+text-align:center;
 }
 
 .about p{
-    color:var(--muted);
-    line-height:1.9;
-    font-size:1.1rem;
-}
-
-/* CONTACT */
-
-.contact{
-    text-align:center;
+line-height:1.8;
+color:var(--muted);
 }
 
 .contact-box{
-    background:var(--card);
-    border-radius:24px;
-    padding:50px;
-    max-width:700px;
-    margin:auto;
-}
-
-.contact-box p{
-    color:var(--muted);
-    margin-top:15px;
+background:var(--card);
+padding:50px;
+border-radius:20px;
+max-width:700px;
+margin:auto;
+text-align:center;
 }
 
 .email{
-    margin-top:25px;
-    font-size:1.1rem;
-    color:#c084fc;
+margin-top:25px;
 }
 
-/* FOOTER */
+.email a{
+color:#c084fc;
+text-decoration:none;
+}
 
 footer{
-    padding:40px 0;
-    text-align:center;
-    color:var(--muted);
-    border-top:1px solid rgba(255,255,255,.05);
-    margin-top:50px;
+padding:40px 0;
+text-align:center;
+color:var(--muted);
+border-top:1px solid rgba(255,255,255,.05);
 }
-
-/* MOBILE */
 
 @media(max-width:768px){
 
 nav{
-    flex-direction:column;
-    gap:20px;
+flex-direction:column;
+gap:20px;
 }
 
 nav ul{
-    gap:20px;
-    flex-wrap:wrap;
-    justify-content:center;
+flex-wrap:wrap;
+justify-content:center;
 }
 
-.hero{
-    min-height:70vh;
 }
-}
+
 </style>
 </head>
 
@@ -270,16 +217,16 @@ nav ul{
 <div class="container">
 
 <nav>
-    <div class="logo">
-        <img src="https://i.imgur.com/N9sN5zL.png" alt="NovaCore.ia">
-        NovaCore<span class="gradient">.ia</span>
-    </div>
+<div class="logo">
+NovaCore<span class="gradient">.ia</span>
+</div>
 
-    <ul>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about">À propos</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
+<ul>
+<li><a href="#services">Services</a></li>
+<li><a href="#about">À propos</a></li>
+<li><a href="#portfolio">Réalisations</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
 </nav>
 
 <section class="hero">
@@ -295,9 +242,7 @@ NovaCore<span class="gradient">.ia</span>
 </h1>
 
 <p>
-Nous créons des agents d'intelligence artificielle personnalisés
-pour automatiser les tâches répétitives, améliorer le service client
-et faire gagner du temps aux entreprises.
+Nous créons des agents d'intelligence artificielle personnalisés pour automatiser les tâches répétitives, améliorer le service client et faire gagner du temps aux entreprises.
 </p>
 
 <div class="buttons">
@@ -313,155 +258,39 @@ et faire gagner du temps aux entreprises.
 
 <div class="section-title">
 <h2>Nos Services</h2>
-<p>Des solutions IA simples, efficaces et adaptées à vos besoins.</p>
+<p>Des solutions IA adaptées à votre activité.</p>
 </div>
 
 <div class="grid">
 
 <div class="card">
-<h3>Agent Service Client</h3>
+<h3>🤖 Agent Service Client</h3>
 <p>
 Répondez automatiquement aux demandes de vos clients 24h/24 et 7j/7.
 </p>
 </div>
 
 <div class="card">
-<h3>Agent FAQ Intelligent</h3>
+<h3>📚 Agent FAQ Intelligent</h3>
 <p>
 Fournissez des réponses instantanées aux questions fréquentes.
 </p>
 </div>
 
 <div class="card">
-<h3>Prise de Rendez-vous</h3>
+<h3>📅 Prise de Rendez-vous</h3>
 <p>
 Automatisez la gestion des rendez-vous et réservations.
 </p>
 </div>
 
 <div class="card">
-<h3>Automatisation de tâches</h3>
+<h3>⚙️ Automatisation de tâches</h3>
 <p>
 Réduisez le temps consacré aux tâches répétitives.
 </p>
-</div>
 
-</div>
-
-</section>
-
-<section id="about">
-
-<div class="about">
-
-<div class="section-title">
-<h2>Pourquoi NovaCore.ia ?</h2>
-</div>
-
-<p>
-NovaCore.ia accompagne les entreprises dans leur transformation
-digitale grâce à des agents IA performants, fiables et simples
-à intégrer. Notre mission est de vous aider à gagner du temps,
-améliorer votre productivité et offrir une meilleure expérience
-à vos clients.
-</p>
-
-</div>
-
-</section>
-    
-<section id="portfolio">
-
-<div class="section-title">
-    <h2>Nos Réalisations</h2>
-    <p>
-        Découvrez quelques exemples d'agents IA et d'automatisations que nous pouvons concevoir.
-    </p>
-</div>
-
-<div class="grid">
-
-    <div class="card">
-        <h3>🤖 Assistant FAQ E-commerce</h3>
-        <p>
-            Agent IA capable de répondre automatiquement aux questions des clients concernant les livraisons, les retours et les paiements.
-        </p>
-    </div>
-
-    <div class="card">
-        <h3>📅 Assistant de Réservation</h3>
-        <p>
-            Gestion automatique des rendez-vous avec confirmations et rappels intégrés.
-        </p>
-    </div>
-
-    <div class="card">
-        <h3>💬 Agent Service Client</h3>
-        <p>
-            Assistant conversationnel disponible 24h/24 pour répondre aux demandes courantes des visiteurs.
-        </p>
-    </div>
-
-    <div class="card">
-        <h3>⚙️ Automatisation des Emails</h3>
-        <p>
-            Classement automatique des emails entrants et préqualification des demandes.
-        </p>
-    </div>
-
-    <div class="card">
-        <h3>📊 Assistant Analyse de Données</h3>
-        <p>
-            Génération automatique de rapports et d'insights à partir des données de l'entreprise.
-        </p>
-    </div>
-
-    <div class="card">
-        <h3>🏢 Assistant Interne Entreprise</h3>
-        <p>
-            Base de connaissances intelligente permettant aux employés de trouver rapidement des informations.
-        </p>
-    </div>
-
-    <div class="card">
-        <h3>🛒 Assistant Commercial</h3>
-        <p>
-            Qualification automatique des prospects et aide à la prise de décision commerciale.
-        </p>
-    </div>
-
-    <div class="card">
-        <h3>📄 Générateur de Documents</h3>
-        <p>
-            Création automatique de devis, rapports et documents administratifs grâce à l'IA.
-        </p>
-    </div>
-
-</div>
-
-<div style="margin-top:60px;text-align:center;">
-
-    <h3 style="font-size:2rem;margin-bottom:20px;">
-        Votre projet pourrait être le prochain
-    </h3>
-
-    <p style="color:#94a3b8;max-width:700px;margin:auto;line-height:1.8;">
-        NovaCore.ia développe des agents d'intelligence artificielle
-        sur mesure pour répondre aux besoins spécifiques des entreprises,
-        indépendants et organisations.
-    </p>
-
-    <div style="margin-top:30px;">
-        <a href="#contact" class="btn btn-primary">
-            Discutons de votre projet
-        </a>
-    </div>
-
-</div</section>
-    
 <section id="contact">
-
-<div class="contact">
 
 <div class="contact-box">
 
@@ -469,33 +298,13 @@ améliorer votre productivité et offrir une meilleure expérience
 
 <p>
 Une question ? Un besoin spécifique ?
-Contactez-nous et discutons ensemble de la meilleure solution.
+Contactez-nous et discutons ensemble de la meilleure solution pour votre entreprise.
 </p>
-<section id="portfolio">
 
-<div class="section-title">
-<h2>Nos Réalisations</h2>
-<p>Exemples d'agents IA que nous pouvons développer pour votre entreprise.</p>
-</div>
-
-<div class="grid">
-
-<div class="card">
-<h3>🤖 Agent FAQ Intelligent</h3>
-<p>
-Répond automatiquement aux questions fréquentes à partir de la documentation de l'entreprise.
-</p>
-</div>
-
-<div class="card">
-<h3>📅 Agent de Prise de Rendez-vous</h3>
-    
 <div class="email">
-<a href="mailto:amedee.lepetit@gmail.com" style="color:#c084fc;text-decoration:none;">
+<a href="mailto:amedee.lepetit@gmail.com">
 amedee.lepetit@gmail.com
 </a>
-</div>
-
 </div>
 
 </div>
@@ -507,6 +316,44 @@ amedee.lepetit@gmail.com
 </footer>
 
 </div>
+
+<!-- Chatbase -->
+
+<script>
+(function(){
+if(!window.chatbase||window.chatbase("getState")!=="initialized"){
+window.chatbase=(...arguments)=>{
+if(!window.chatbase.q){
+window.chatbase.q=[]
+}
+window.chatbase.q.push(arguments)
+};
+
+window.chatbase=new Proxy(window.chatbase,{
+get(target,prop){
+if(prop==="q"){
+return target.q
+}
+return(...args)=>target(prop,...args)
+}
+})
+}
+
+const onLoad=function(){
+const script=document.createElement("script");
+script.src="https://www.chatbase.co/embed.min.js";
+script.id="g-Hc0_6jVvitnN1O7ubCD";
+script.domain="www.chatbase.co";
+document.body.appendChild(script);
+};
+
+if(document.readyState==="complete"){
+onLoad();
+}else{
+window.addEventListener("load",onLoad);
+}
+})();
+</script>
 
 </body>
 </html>
